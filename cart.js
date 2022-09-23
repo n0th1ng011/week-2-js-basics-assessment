@@ -35,7 +35,9 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const priceSum = cart.map(num => num.price).reduce((x, y) => x + y)
+
+//console.log(priceSum)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,7 +56,8 @@ const cart = [
 */
 
 //CODE HERE
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => ((cartTotal) * (1 + tax) - couponValue)
+console.log(calcFinalPrice(9, 2, .04))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -79,7 +82,10 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+    The first and last name of the customer, their contact info and order, and price total so the order can be tracked and reach it's intended destination
+    
+    Personal info and orders will be in strings for easy input
+    Price totals will be in number values for fast cost calculations
 */
 
 /*
@@ -88,3 +94,10 @@ const cart = [
 */
 
 //CODE HERE
+const customerInfo = {
+    firstName: 'Jackie',
+    lastName: 'Chan',
+    contactInfo: '747-777-1919',
+    order: 'Two Pepperoni Pizzas',
+    priceTotal: 28.93
+}
